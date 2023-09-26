@@ -30,59 +30,72 @@
         <h1 class="title">Spli<br />tter</h1>
       </header>
       <div class="card">
-        <div class="card__block">
-          <label class="block__label">Bill</label>
-          <div class="input__container">
-            <img
-              class="input__icon--dollars"
-              src="./images/icon-dollar.svg"
-              alt="dollar icon"
-            />
-            <input class="input__field" type="number" id="bill" />
+        <div class="card__left">
+          <div class="card__block">
+            <label class="block__label">Bill</label>
+            <div class="input__container">
+              <img
+                class="input__icon--dollars"
+                src="./images/icon-dollar.svg"
+                alt="dollar icon"
+              />
+              <input class="input__field" type="text" id="bill" pattern="[0-9]+" />
+            </div>
+          </div>
+          <div class="card__block">
+            <label class="block__label">Select Tip %</label>
+            <div class="button__container">
+              <button class="tip__button tip__button1 button">5%</button>
+              <button class="tip__button tip__button2 button">10%</button>
+              <button class="tip__button tip__button3 button">15%</button>
+              <button class="tip__button tip__button4 button">25%</button>
+              <button class="tip__button tip__button5 button">50%</button>
+              <input
+                class="custom__button button"
+                type="text"
+                placeholder="Custom"
+                pattern="[0-9]+"
+              />
+            </div>
+          </div>
+          <div class="card__block">
+            <label class="block__label">Number of People</label>
+            <div class="input__container">
+              <img
+                class="input__icon--people"
+                src="./images/icon-person.svg"
+                alt="people icon"
+              />
+              <input
+                class="input__field"
+                type="text"
+                id="people"
+                pattern="[0-9]+"
+              />
+            </div>
           </div>
         </div>
-        <div class="card__block">
-          <label class="block__label">Select Tip %</label>
-          <div class="button__container">
-            <button class="tip__button tip__button1 button">5%</button>
-            <button class="tip__button tip__button2 button">10%</button>
-            <button class="tip__button tip__button3 button">15%</button>
-            <button class="tip__button tip__button4 button">25%</button>
-            <button class="tip__button tip__button5 button">50%</button>
-            <input
-              class="custom__button button"
-              type="number"
-              placeholder="Custom"
-            />
+
+        <div class="card__right">
+          <div class="card__calculation card__block">
+            <div class="calculation__tips">
+              <div class="calculation__block card__block">
+                <p class="tip__amount">
+                  Tip Amount <br />
+                  / person
+                </p>
+                <p class="amount--dollars">$0.00</p>
+              </div>
+              <div class="calculation__block card__block">
+                <p class="tip__amount">
+                  Total <br />
+                  / person
+                </p>
+                <p class="amount--dollars">$0.00</p>
+              </div>
+            </div>
+            <button class="reset__button button">Reset</button>
           </div>
-        </div>
-        <div class="card__block">
-          <label class="block__label">Number of People</label>
-          <div class="input__container">
-            <img
-              class="input__icon--people"
-              src="./images/icon-person.svg"
-              alt="people icon"
-            />
-            <input class="input__field" type="number" id="people" />
-          </div>
-        </div>
-        <div class="card__calculation card__block">
-          <div class="calculation__block card__block">
-            <p class="tip__amount">
-              Tip Amount <br />
-              / person
-            </p>
-            <p class="amount--dollars">$0.00</p>
-          </div>
-          <div class="calculation__block card__block">
-            <p class="tip__amount">
-              Total <br />
-              / person
-            </p>
-            <p class="amount--dollars">$0.00</p>
-          </div>
-          <button class="reset__button button">Reset</button>
         </div>
       </div>
     </div>
