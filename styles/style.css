@@ -29,6 +29,7 @@ body{
 
 input{
     font-size: 16px;
+    box-sizing: content-box;
 }
 
 .header{
