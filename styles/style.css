@@ -1,0 +1,192 @@
+:root{
+
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Light-grayish-cyan);
+}
+
+input{
+    font-size: 24px;
+}
+
+.header{
+    padding: 1.5rem;
+}
+
+.title{
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    font-size: 24px;
+}
+
+.card__block{
+    width: 100%;
+}
+
+.card{
+    background-color: var(--White);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+input,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+        margin: 0;
+        width: 100%;
+        border: none;
+        background-color: var(--Very-light-grayish-cyan);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.block__label{
+    color: var(--Dark-grayish-cyan);
+    line-height: 3;
+}
+
+.input__container{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    border-radius: 0.25rem;
+    padding-inline: 1rem;
+    border: 2px solid transparent;
+}
+
+.input__container:hover,
+.input__container:focus,
+.input__container:active{
+    border: 2px solid var(--Strong-cyan);
+}
+
+.input__field{
+    direction: rtl;
+    outline: none;
+}
+
+.input__icon--dollars{
+    width: 0.5rem;
+    height: 1rem;
+}
+
+.tip__button1{
+    grid-area: five;
+}
+
+.tip__button2{
+    grid-area: ten;
+}
+
+.tip__button3{
+    grid-area: fifteen;
+}
+
+.tip__button4{
+    grid-area: twentyFive;
+}
+
+.tip__button5{
+    grid-area: fifty;
+}
+
+.custom__button{
+    grid-area: custom;
+}
+
+.button__container{
+    display: grid;
+    grid-template-areas:
+    'five ten'
+    'fifteen twentyFive'
+    'fifty custom';
+    gap: 0.5rem;
+}
+
+.tip__button, .custom__button{
+    width: 6.5rem;
+    height: 3rem;
+    margin-inline: auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tip__button:hover{
+    background-color: var(--Strong-cyan);
+    transition: background-color 0.3s;
+}
+
+.tip__button:not(:hover){
+    transition: background-color 0.5s;
+}
+
+.custom__button{
+    border: 2px solid transparent;
+}
+
+.custom__button:hover{
+    border: 2px solid var(--Strong-cyan);
+}
+
+.card__calculation{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem;
+    color: var(--White);
+}
+
+.calculation__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tip__amount{
+    font-size: 12px;
+}
+
+.amount--dollars{
+    font-size: 24px;
+    color: var(--Strong-cyan);
+}
