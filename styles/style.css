@@ -1,6 +1,4 @@
 :root{
-
-
     --Strong-cyan: hsl(172, 67%, 45%);
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -30,7 +28,7 @@ body{
 }
 
 input{
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .header{
@@ -68,7 +66,7 @@ input::-webkit-inner-spin-button {
         margin: 0;
         width: 100%;
         border: none;
-        background-color: var(--Very-light-grayish-cyan);
+        background-color: var(--Grayish-cyan);
 }
 
 input[type=number] {
@@ -84,7 +82,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     height: 2.5rem;
-    background-color: var(--Very-light-grayish-cyan);
+    background-color: var(--Grayish-cyan);
     border: none;
     border-radius: 0.25rem;
     padding-inline: 1rem;
@@ -98,7 +96,7 @@ input[type=number] {
 }
 
 .input__field{
-   
+    direction: rtl;
     outline: none;
 }
 
