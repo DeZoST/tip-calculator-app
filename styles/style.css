@@ -98,7 +98,7 @@ input[type=number] {
 }
 
 .input__field{
-    direction: rtl;
+   
     outline: none;
 }
 
