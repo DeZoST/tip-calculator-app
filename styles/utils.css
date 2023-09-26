@@ -64,6 +64,51 @@
     .container {
       max-width: 1280px;
     }
+
+    .main{
+      height: 30rem;
+      width: 60rem;
+    }
+
+    .card{
+      width: 100%;
+      margin-inline: auto;
+      flex-direction: row;
+      border-radius: 1.5rem;
+      height: 100%;
+    }
+
+    .card__right, .card__left{
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .card__calculation{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.85rem 1.5rem;
+    }
+
+    .calculation__tips{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card__left{
+      gap: 1.85rem;
+    }
+
+    .button__container{
+      grid-template-areas:
+      'five ten fifteen'
+      'twentyFive fifty custom';
+      gap: 0.5rem;
+  }
   }
   
   /* 2xl */
