@@ -32,7 +32,7 @@ input{
     margin: 0;
     width: 100%;
     border: none;
-    background-color: var(--Grayish-cyan);
+    background-color: var(--Light-grayish-cyan);
 }
 
 .header{
@@ -78,7 +78,7 @@ input{
     display: flex;
     align-items: center;
     height: 2.5rem;
-    background-color: var(--Grayish-cyan);
+    background-color: var(--Light-grayish-cyan);
     border: none;
     border-radius: 0.25rem;
     padding-inline: 1rem;
