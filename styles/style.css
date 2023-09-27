@@ -136,6 +136,44 @@ input{
     gap: 0.5rem;
 }
 
+.button{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    padding: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+button.active{
+  background-color: var(--Strong-cyan);
+}
+
+.custom__button{
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: text;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+.reset__button{
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+  height: 2.55rem;
+  text-transform: uppercase;
+}
+
+.reset__button:hover{
+  background-color: var(--Light-grayish-cyan);
+  transition: background-color 0.3s;
+}
+
+.reset__button:not(:hover){
+  transition: background-color 0.5s;
+}
+
 .tip__button, .custom__button{
     width: 6.5rem;
     height: 3rem;
@@ -152,7 +190,6 @@ input{
 .tip__button:not(:hover){
     transition: background-color 0.5s;
 }
-
 
 .custom__button:hover{
     border: 2px solid var(--Strong-cyan);
