@@ -1,29 +1,4 @@
 /* All our Utility Classes go in here. */
-.button{
-    background-color: var(--Very-dark-cyan);
-    color: var(--White);
-    border: none;
-    padding: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 0.25rem;
-}
-
-.custom__button{
-  background-color: var(--Very-light-grayish-cyan);
-  color: var(--Very-dark-cyan);
-  cursor: text;
-  outline: none;
-  border-radius: 0.25rem;
-}
-
-.reset__button{
-  color: var(--Very-dark-cyan);
-  background-color: var(--Strong-cyan);
-  height: 2.55rem;
-  text-transform: uppercase;
-}
-
 .container {
     width: 100%;
     margin-inline: auto;
