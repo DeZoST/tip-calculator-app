@@ -75,18 +75,6 @@ percentageButtons.forEach((button) => {
 });
 calculateTip();
 
-
-
-resetButton.addEventListener("click", () => {
-  billInput.value = "";
-  peopleInput.value = "";
-  customInput.value = "";
-  tipAmountElement.textContent = "$0.00";
-  totalAmountElement.textContent = "$0.00";
-});
-
-
-
 resetButton.addEventListener("click", () => {
   billInput.value = "";
   peopleInput.value = "";
