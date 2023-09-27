@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/utils.css" />
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <div class="main container">
@@ -33,13 +34,18 @@
         <div class="card__left">
           <div class="card__block">
             <label class="block__label">Bill</label>
-            <div class="input__container">
+            <div id="bill__container" class="input__container">
               <img
                 class="input__icon--dollars"
                 src="./images/icon-dollar.svg"
                 alt="dollar icon"
               />
-              <input class="input__field" type="text" id="bill" pattern="[0-9]+" />
+              <input
+                class="input__field"
+                type="text"
+                id="bill__input"
+                pattern="[0-9]+"
+              />
             </div>
           </div>
           <div class="card__block">
@@ -51,7 +57,8 @@
               <button class="tip__button tip__button4 button">25%</button>
               <button class="tip__button tip__button5 button">50%</button>
               <input
-                class="custom__button button"
+                class="custom__button tip__button"
+                id="custom__input"
                 type="text"
                 placeholder="Custom"
                 pattern="[0-9]+"
@@ -60,7 +67,7 @@
           </div>
           <div class="card__block">
             <label class="block__label">Number of People</label>
-            <div class="input__container">
+            <div id="people__container" class="input__container">
               <img
                 class="input__icon--people"
                 src="./images/icon-person.svg"
@@ -69,7 +76,7 @@
               <input
                 class="input__field"
                 type="text"
-                id="people"
+                id="people__input"
                 pattern="[0-9]+"
               />
             </div>
@@ -84,17 +91,19 @@
                   Tip Amount <br />
                   / person
                 </p>
-                <p class="amount--dollars">$0.00</p>
+                <p id="tip__amount" class="amount--dollars">$0.00</p>
               </div>
               <div class="calculation__block card__block">
                 <p class="tip__amount">
                   Total <br />
                   / person
                 </p>
-                <p class="amount--dollars">$0.00</p>
+                <p id="total__amount" class="amount--dollars">$0.00</p>
               </div>
             </div>
-            <button class="reset__button button">Reset</button>
+            <button id="reset__button" class="reset__button button">
+              Reset
+            </button>
           </div>
         </div>
       </div>

@@ -85,9 +85,11 @@ input{
     border: 2px solid transparent;
 }
 
-.input__container:hover,
-.input__container:focus,
-.input__container:active{
+.input__container:hover{
+    border: 2px solid var(--Strong-cyan);
+}
+
+.input__container--active{
     border: 2px solid var(--Strong-cyan);
 }
 
@@ -151,9 +153,6 @@ input{
     transition: background-color 0.5s;
 }
 
-.custom__button{
-    border: 2px solid transparent;
-}
 
 .custom__button:hover{
     border: 2px solid var(--Strong-cyan);

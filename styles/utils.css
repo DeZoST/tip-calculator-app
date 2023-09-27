@@ -13,6 +13,8 @@
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Very-dark-cyan);
   cursor: text;
+  outline: none;
+  border-radius: 0.25rem;
 }
 
 .reset__button{
