@@ -21,8 +21,8 @@ function calculateTip() {
   const tipAmount = (billAmount * (selectedPercentage / 100)) / numberOfPeople;
   const totalAmount = billAmount / numberOfPeople + tipAmount;
 
-  tipAmountElement.textContent = tipAmount.toFixed(2);
-  totalAmountElement.textContent = totalAmount.toFixed(2);
+  tipAmountElement.textContent = "$" + tipAmount.toFixed(2);
+  totalAmountElement.textContent = "$" + totalAmount.toFixed(2);
 }
 
 function getSelectedDefaultPercentage() {
