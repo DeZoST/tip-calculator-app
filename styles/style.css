@@ -6,6 +6,7 @@
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
+    --Red: hsl(0, 100%, 66%);
 }
 
 *,
@@ -85,12 +86,16 @@ input{
     border: 2px solid transparent;
 }
 
-.input__container:hover{
-    border: 2px solid var(--Strong-cyan);
+.input__container:hover, .input__container:hover > .input__field{
+    background-color: var(--Dark-grayish-cyan);
 }
 
 .input__container--active{
     border: 2px solid var(--Strong-cyan);
+}
+
+.input__container--error{
+    border: 2px solid var(--Red); 
 }
 
 .input__field{
@@ -189,10 +194,6 @@ input{
 
 .tip__button:not(:hover){
     transition: background-color 0.5s;
-}
-
-.custom__button:hover{
-    border: 2px solid var(--Strong-cyan);
 }
 
 .card__calculation{
