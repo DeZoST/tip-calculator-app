@@ -146,7 +146,7 @@ input{
     border-radius: 0.25rem;
 }
 
-button.active{
+.tip__button.active{
   background-color: var(--Strong-cyan);
 }
 
