@@ -55,12 +55,13 @@ function calculateTip() {
 
   selectedTipPercentage = customInput.value ? customTipPercentage : selectedTipPercentage;
 
-  const tipAmount = (billAmount * (selectedTipPercentage / 100)) / numberOfPeople;
-  const totalAmount = billAmount / numberOfPeople + tipAmount;
+  const tipAmount = customInput.value ? (billAmount * (selectedTipPercentage / 100)) / numberOfPeople : 0;
+  const totalAmount = customInput.value ? (billAmount / numberOfPeople + tipAmount) : 0;
 
-  tipAmountElement.textContent = `$${tipAmount.toFixed(2)}`;
-  totalAmountElement.textContent = `$${totalAmount.toFixed(2)}`;
+  tipAmountElement.textContent = tipAmount === 0 ? "$0.00" : `$${tipAmount.toFixed(2)}`;
+  totalAmountElement.textContent = totalAmount === 0 ? "$0.00" : `$${totalAmount.toFixed(2)}`;
 }
+
 
 // Event Listeners
 
