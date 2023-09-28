@@ -92,8 +92,13 @@ input {
     border: 2px solid transparent;
 }
 
-.input__container:hover, .input__container:hover > .input__field {
-    background-color: var(--Dark-grayish-cyan);
+.input__container:hover{
+    scale: 1.05;
+    transition: all 0.3s;
+}
+
+.input__container:not(:hover){
+    transition: all 0.5s;
 }
 
 .input__container--active {
@@ -188,12 +193,13 @@ input {
 /* Reset Button Hover Styles */
 .reset__button:hover {
     background-color: var(--Light-grayish-cyan);
-    transition: background-color 0.3s;
+    scale: 1.05;
+    transition: all 0.3s;
 }
 
 /* Reset Button Transition Styles */
 .reset__button:not(:hover) {
-    transition: background-color 0.5s;
+    transition: all 0.5s;
 }
 
 /* Button and Custom Button Styles */
@@ -208,12 +214,13 @@ input {
 /* Tip Button Hover Styles */
 .tip__button:hover {
     background-color: var(--Strong-cyan);
-    transition: background-color 0.3s;
+    scale: 1.1;
+    transition: all 0.3s;
 }
 
 /* Tip Button Transition Styles */
 .tip__button:not(:hover) {
-    transition: background-color 0.5s;
+    transition: all 0.5s;
 }
 
 /* Card Calculation Styles */
