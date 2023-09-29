@@ -10,6 +10,11 @@
   --Red: hsl(0, 100%, 66%);
 }
 
+::placeholder {
+  color: var(--Dark-grayish-cyan);
+  opacity: 1;
+}
+
 /* Reset Styles */
 *,
 *::before,
@@ -143,7 +148,7 @@ input {
 
 .custom__button {
   background-color: var(--Very-light-grayish-cyan);
-  color: var(--Very-dark-cyan);
+  color: var(--White);
   cursor: text;
   outline: none;
   border-radius: 0.25rem;
