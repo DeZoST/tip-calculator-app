@@ -42,10 +42,19 @@ function handleInputChange(input, container) {
 function handleTipButtonClick(button) {
   tipButtons.forEach((btn) => btn.classList.remove("active"));
   button.classList.add("active");
-  selectedTipPercentage = parseFloat(button.textContent);
-  customInput.value = "";
+
+  if (button.id === "custom__input") {
+    tipAmountElement.textContent = "$0.00";
+    totalAmountElement.textContent = "$0.00";
+    selectedTipPercentage = 0;
+  } else {
+    selectedTipPercentage = parseFloat(button.textContent);
+    customInput.value = "";
+  }
+
   calculateTip();
 }
+
 
 // Fonction de calcul du pourboire et du montant total
 function calculateTip() {
@@ -55,11 +64,11 @@ function calculateTip() {
 
   selectedTipPercentage = customInput.value ? customTipPercentage : selectedTipPercentage;
 
-  const tipAmount = customInput.value ? (billAmount * (selectedTipPercentage / 100)) / numberOfPeople : 0;
-  const totalAmount = customInput.value ? (billAmount / numberOfPeople + tipAmount) : 0;
+  const tipAmount = (billAmount * (selectedTipPercentage / 100)) / numberOfPeople;
+  const totalAmount = billAmount / numberOfPeople + tipAmount;
 
-  tipAmountElement.textContent = tipAmount === 0 ? "$0.00" : `$${tipAmount.toFixed(2)}`;
-  totalAmountElement.textContent = totalAmount === 0 ? "$0.00" : `$${totalAmount.toFixed(2)}`;
+  tipAmountElement.textContent = `$${tipAmount.toFixed(2)}`;
+  totalAmountElement.textContent = `$${totalAmount.toFixed(2)}`;
 }
 
 
