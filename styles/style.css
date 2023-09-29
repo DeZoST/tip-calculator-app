@@ -1,254 +1,238 @@
-/* Global CSS Variables */
+/* Global Styles */
 :root {
-    --Strong-cyan: hsl(172, 67%, 45%);
-    --Very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(186, 14%, 43%);
-    --Grayish-cyan: hsl(184, 14%, 56%);
-    --Light-grayish-cyan: hsl(185, 41%, 84%);
-    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
-    --White: hsl(0, 0%, 100%);
-    --Red: hsl(0, 100%, 66%);
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --Red: hsl(0, 100%, 66%);
 }
 
-/* Global Reset Styles */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    font-family: 'Space Mono', monospace;
+/* Reset Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: "Space Mono", monospace;
 }
 
 /* Body Styles */
 body {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--Light-grayish-cyan);
-}
-
-/* Input Styles */
-input {
-    font-size: 16px;
-    margin: 0;
-    width: 100%;
-    border: none;
-    background-color: var(--Light-grayish-cyan);
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--Light-grayish-cyan);
 }
 
 /* Header Styles */
 .header {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 /* Title Styles */
 .title {
-    color: var(--Very-dark-cyan);
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    text-align: center;
-    font-size: 24px;
-}
-
-/* Card Block Styles */
-.card__block {
-    width: 100%;
+  color: var(--Very-dark-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-size: 24px;
 }
 
 /* Card Styles */
-.card {
-    background-color: var(--White);
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+.card__block {
+  width: 100%;
 }
 
-/* Card Left and Right Styles */
-.card__left, .card__right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.card {
+  background-color: var(--White);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card__left,
+.card__right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Block Label Styles */
 .block__label {
-    color: var(--Dark-grayish-cyan);
-    line-height: 3;
+  color: var(--Dark-grayish-cyan);
+  line-height: 3;
 }
 
-/* Input Container Styles */
+/* Input Styles */
+input {
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  background-color: var(--Light-grayish-cyan);
+}
+
 .input__container {
-    display: flex;
-    align-items: center;
-    height: 2.5rem;
-    background-color: var(--Light-grayish-cyan);
-    border: none;
-    border-radius: 0.25rem;
-    padding-inline: 1rem;
-    border: 2px solid transparent;
-}
-
-.input__container:hover{
-    scale: 1.05;
-    transition: all 0.3s;
-}
-
-.input__container:not(:hover){
-    transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  background-color: var(--Light-grayish-cyan);
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  padding-inline: 1rem;
+  cursor: pointer;
 }
 
 .input__container--active {
-    border: 2px solid var(--Strong-cyan);
+  border: 2px solid var(--Strong-cyan);
 }
 
 .input__container--error {
-    border: 2px solid var(--Red);
+  border: 2px solid var(--Red);
 }
 
-/* Input Field Styles */
 .input__field {
-    direction: rtl;
-    outline: none;
+  direction: rtl;
+  outline: none;
 }
 
-/* Input Icon Styles */
 .input__icon--dollars {
-    width: 0.5rem;
-    height: 1rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
-/* Tip Button Styles */
-.tip__button1 {
-    grid-area: five;
-}
-
-.tip__button2 {
-    grid-area: ten;
-}
-
-.tip__button3 {
-    grid-area: fifteen;
-}
-
-.tip__button4 {
-    grid-area: twentyFive;
-}
-
-.tip__button5 {
-    grid-area: fifty;
-}
-
-/* Custom Button Styles */
+/* Tip and Custom Buttons Styles */
+.tip__button1,
+.tip__button2,
+.tip__button3,
+.tip__button4,
+.tip__button5,
 .custom__button {
-    grid-area: custom;
+  grid-area: five / ten / fifteen / twentyFive / fifty / custom;
+  width: 6.5rem;
+  height: 3rem;
+  margin-inline: auto;
+  font-size: 16px;
+  text-align: center;
 }
 
 /* Button Container Styles */
 .button__container {
-    display: grid;
-    grid-template-areas:
-    'five ten'
-    'fifteen twentyFive'
-    'fifty custom';
-    gap: 0.5rem;
+  display: grid;
+  grid-template-areas:
+    "five ten"
+    "fifteen twentyFive"
+    "fifty custom";
+  gap: 0.5rem;
 }
 
-/* General Button Styles */
 .button {
-    background-color: var(--Very-dark-cyan);
-    color: var(--White);
-    border: none;
-    padding: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 0.25rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
 }
 
-/* Active Tip Button Styles */
-.tip__button.active {
-    background-color: var(--Strong-cyan);
-}
-
-/* Custom Button Styles */
 .custom__button {
-    background-color: var(--Very-light-grayish-cyan);
-    color: var(--Very-dark-cyan);
-    cursor: text;
-    outline: none;
-    border-radius: 0.25rem;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: text;
+  outline: none;
+  border-radius: 0.25rem;
 }
 
 /* Reset Button Styles */
 .reset__button {
-    color: var(--Very-dark-cyan);
-    background-color: var(--Strong-cyan);
-    height: 2.55rem;
-    text-transform: uppercase;
-}
-
-/* Reset Button Hover Styles */
-.reset__button:hover {
-    background-color: var(--Light-grayish-cyan);
-    scale: 1.05;
-    transition: all 0.3s;
-}
-
-/* Reset Button Transition Styles */
-.reset__button:not(:hover) {
-    transition: all 0.5s;
-}
-
-/* Button and Custom Button Styles */
-.tip__button, .custom__button {
-    width: 6.5rem;
-    height: 3rem;
-    margin-inline: auto;
-    font-size: 16px;
-    text-align: center;
-}
-
-/* Tip Button Hover Styles */
-.tip__button:hover {
-    background-color: var(--Strong-cyan);
-    scale: 1.1;
-    transition: all 0.3s;
-}
-
-/* Tip Button Transition Styles */
-.tip__button:not(:hover) {
-    transition: all 0.5s;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+  height: 2.55rem;
+  text-transform: uppercase;
 }
 
 /* Card Calculation Styles */
 .card__calculation {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: var(--Very-dark-cyan);
-    border-radius: 1rem;
-    padding: 2rem 1rem 1rem;
-    color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 2rem 1rem 1rem;
+  color: var(--White);
 }
 
-/* Calculation Block Styles */
 .calculation__block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Tip Amount Styles */
 .tip__amount {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-/* Dollar Amount Styles */
 .amount--dollars {
-    font-size: 24px;
-    color: var(--Strong-cyan);
+  font-size: 24px;
+  color: var(--Strong-cyan);
+}
+
+/* Pseudo-Selectors and Animations */
+
+/* Input Container Hover Animation */
+.input__container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+.input__container:not(:hover) {
+  transition: transform 0.3s;
+}
+
+.input__container:active {
+  transform: scale(1);
+  transition: transform 0.1s ease-out;
+}
+
+/* Tip Button Styles */
+.tip__button.active {
+  background-color: var(--Strong-cyan);
+}
+
+.tip__button:hover {
+  background-color: var(--Strong-cyan);
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tip__button:not(:hover) {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tip__button:active {
+  transform: scale(1);
+  transition: transform 0.1s ease-out;
+}
+
+/* Reset Button Styles */
+.reset__button:hover {
+  background-color: var(--Light-grayish-cyan);
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset__button:not(:hover) {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset__button:active {
+  transform: scale(1);
+  transition: transform 50ms ease-out;
 }
